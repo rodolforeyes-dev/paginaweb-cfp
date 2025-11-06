@@ -135,9 +135,8 @@ header {
     text-align: center;
 }
 
-.imgPrincipal img {
-    max-width: 400px; 
-    width: 100%;
+.imgPrincipal img {    
+    width: 80%;
     height: auto;
 }
 
@@ -154,12 +153,12 @@ header {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
 .tituloCfp a {
-    color: #ffffff;
+    color: black;
     text-decoration: none;
 
 }
 .tituloCfp a:hover {
-    color: #22255c; 
+    color: var(--fondo); 
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
