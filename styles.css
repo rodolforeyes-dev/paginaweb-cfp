@@ -278,8 +278,12 @@ fieldset{
             transition: all 0.3s ease;
         }
 .btn-secundario:hover {
-            background: var(--secundario)
-            border-color: var(var(--primario))
+            background: var(--secundario);
+            border-color: var(--primario);
+}
+
+
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   footer {
