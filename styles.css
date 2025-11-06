@@ -89,5 +89,17 @@ footer{
     flex-direction: row;
 }
 */
-
+/*css ezequiel*/
+.nosotros{
+    display:grid;
+    background: var(--fondo);
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+    gap: 20px;
+}
+.nosotros-article{
+    border: 2px solid black;
+}
+/*finalizo ezequiel*/
 
