@@ -26,6 +26,7 @@ header {
   background-color: var(--secundario);
   border-bottom: 3px solid var(--secundario);
   z-index: 1000;
+   color: var(--fondo);
 }
 
 /* --- NAVBAR --- */
@@ -35,6 +36,7 @@ header {
   align-items: center;
   padding: 10px 30px;
   background-color: var(--secundario);
+ 
 }
 
 /* --- LOGO --- */
@@ -42,14 +44,16 @@ header {
     display: flex;
     justify-items: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
-    color: var(--primario);
+    
 }
-
 .logo img {
   height: 60px;
   width: auto;
+}
+.logo h3:hover{
+    color: var(--verde);
 }
 
 /* --- MENÚ --- */
@@ -59,10 +63,11 @@ header {
   justify-content: flex-end;
   gap: 40px;
   margin-right: 40px;
+  
 }
 
 .menu a {
-  color: var(--primario);
+ color:var(--fondo);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
@@ -81,7 +86,7 @@ header {
 }
 
 .contact-icons a {
-  color: var(--primario);
+  color: var(--fondo);
   font-size: 1.1rem;
   transition: color 0.3s;
 }
@@ -232,10 +237,11 @@ footer {
 .footer-copy {
   width: 100%;
   text-align: center; 
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   opacity: 0.8;
   margin-top: 5px;
 }
+
 
 /* --- PARA QUE EL CONTENIDO NO QUEDE TAPADO --- */
 
