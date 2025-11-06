@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cursos</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-     <header>
-        <div>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+   <!-- HEADER  -->
+    <header>
+        <nav class="navbar">
             <div class="logo">
-                <img src="" alt="Logo de pagina e inicio">
+                <a href="index.html">
+                    <img src="/img/LOGO-CFP.png" alt="Logo CFP">
+                </a>
+                <h3>CFP N°401</h3>
             </div>
-            <div class="nombrePagina">
-                <img src="" alt="">
-            </div>
-            <div class="contactoPagina">
-                <a href="#">Telefono</a>
-                <a href="#">Email</a>
-                <a href="#">Direccion</a>
-                <a href="#">Redes</a>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Nosotros</li>
-                <li>Cursos</li>
-                <li>Noticias</li>
-                <li>Contacto</li>
+            <!--MENU NAVEGACION-->
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="/cursos/cursos.html">Cursos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li> | </li>
             </ul>
+            <!--Menu iconos contacto-->
+            <div class="contact-icons">
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+            </div>
         </nav>
     </header>
-</body>
+    <main>
+      <div class="info">
+        <h1>Cursos</h1>
+      </div>
+
+      <div class="cursos">
+        <article>Curso 1</article>
+        <article>Curso 2</article>
+        <article>Curso 3</article>
+        <article>Curso 4</article>
+        <article>Curso 5</article>
+      </div>
+    </main>
+     <!--Footer navegacion y links-->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="/cursos/cursos.html">Cursos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </div>
+        <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
+    </footer>
+  </body>
 </html>
