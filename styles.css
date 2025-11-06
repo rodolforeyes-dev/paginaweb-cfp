@@ -13,8 +13,106 @@
     --verde: #8eb53e;
     --naranja: #fc8a2a;
 }
+/* --- HEADER GENERAL --- */
+header {
+  width: 100%;
+  background-color: var(--fondo);
+  border-bottom: 3px solid var(--secundario);
+}
 
+/* --- FILA SUPERIOR DEL HEADER --- */
+.header-nav {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--fondo);
+}
 
+/* --- LOGO --- */
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+/* --- NOMBRE DE LA PÁGINA --- */
+.nombrePagina{
+    align-content: center;
+}
+.nombrePagina img {
+ height: 20vh;
+
+}
+
+/* --- CONTACTO --- */
+.contactoPagina {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+  align-content: flex-end;
+}
+
+.contactoPagina a {
+  color: var(--primario);
+  text-decoration: none;
+  font-size: 0.9rem;
+ 
+}
+
+.contactoPagina i:hover {
+  text-decoration: underline;
+  color: var(--secundario);
+}
+
+/* --- NAVBAR --- */
+nav {
+  background-color: var(--secundario);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contactoPagina {
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/*finalizan los estilos para header*/
+/*Stylos para Index */
+
+/* Finalizan estilos para index*/
 
 /* FORMATO NAV
 nav{
