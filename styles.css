@@ -122,6 +122,7 @@ header {
 
 .principal {
     display: flex;
+    flex-direction: column;
   justify-content: center;
     align-items: center;
     padding: 40px 0;
@@ -164,6 +165,65 @@ header {
 
 /*fin de los estilos Index*/
 /* Finalizan estilos para index*/
+
+/*estilos para carrousel*/
+.carousel {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.carousel h2 {
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 51, 102, 0.8);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 51, 102, 1);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* FORMATO NAV
 nav{
@@ -253,7 +313,7 @@ footer{
 /*finalizo ezequiel*/
 
 footer {
-  position: fixed;
+ position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -266,7 +326,7 @@ footer {
   padding: 10px 20px;
   box-sizing: border-box;
   height: 150px;
-  z-index: 100;
+  z-index: 20;
 }
 
 /* --- ENLACES --- */
