@@ -77,6 +77,38 @@ header {
   color: var(--verde);
   text-decoration: underline;
 }
+/* MENU DESPLEGABLE DROPDOWN */
+.menu li {
+  position: relative; 
+}
+
+.menu .subcurso {
+  display: none;
+  position: absolute;
+  background: var(--secundario);
+  color: var(--fondo);
+  padding: 6px 0;
+  min-width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  z-index: 2000;
+}
+.menu .subcurso a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--fondo);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu .subcurso a:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--verde);
+  text-decoration: none;
+}
+.menu li.curso:hover > .subcurso {
+  display: block;
+}
 
 /* --- ICONOS DE CONTACTO --- */
 .contact-icons {
