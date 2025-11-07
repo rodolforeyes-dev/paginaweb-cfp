@@ -402,15 +402,22 @@ footer{
 */
 /*css ezequiel*/
 .nosotros{
-    display:grid;
+    display:flex;
     background: var(--fondo);
-    margin: 10px;
+    
+    flex-direction: column;
+    margin-top: 80px;
     padding: 10px;
     align-content: center;
     gap: 20px;
 }
 .nosotros-article{
     border: 2px solid black;
+}
+
+.nosotros img{
+  margin: 100px;
+  padding: 20px;
 }
 /*finalizo ezequiel*/
 
