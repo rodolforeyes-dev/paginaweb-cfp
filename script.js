@@ -1,3 +1,4 @@
+//limpiar formulario contacto
 function limpiarFormulario() {
   document.getElementById("nombre").value = "";
   document.getElementById("telefono").value = "";
@@ -5,6 +6,8 @@ function limpiarFormulario() {
   document.getElementById("curso").value = "";
   document.getElementById("comentario").value = "";
 }
+//fin formulario
+
 // Carrusel reutilizable con auto-play y pausa al pasar el mouse
 document.querySelectorAll('.carousel').forEach(carrusel => {
   const track = carrusel.querySelector('.carousel-track');
