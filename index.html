@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Web del CFP 401 - MONTE</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/3dec5ccc06.js" crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Web del CFP 401 - MONTE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/3dec5ccc06.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-<!-- HEADER  -->
+ <!-- HEADER  -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -61,35 +61,133 @@
         <h3>Motores Eléctricos</h3>
         <p>Diagnóstico y reparación de motores eléctricos monofásicos.</p>
       </div>
-      <div class="card">
-        <img src="img/electricidad3.jpg" alt="Tableros y Automatización">
-        <h3>Tableros y Automatización</h3>
-        <p>Diseño de tableros eléctricos y automatización básica con contactores.</p>
+      <!--MENU NAVEGACION-->
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="/cursos/cursos.html">Cursos</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li> | </li>
+      </ul>
+      <!--Menu iconos contacto-->
+      <div class="contact-icons">
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="#"><i class="fa-solid fa-globe"></i></a>
       </div>
-      <!-- Podés agregar más cards sin tocar el JS -->
+    </nav>
+  </header>
+  <!--Main Claudio imagen principal-->
+  <main class="principal">
+    <div class="imgPrincipal">
+      <img src="img/LOGO CFP1.jpg" alt="imagen principal">
+      <h1 class="tituloCfp">
+        <a href="#">C.F.P N° 401 MONTE</a>
+      </h1>
     </div>
+    <!--Carrousel para noticias-->
+    <section class="carousel">
+      <h1>NOTICIAS</h1>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="card">
+            <img src="/img/noticias/DIASECRETARIA_foto.jpg" alt="Día de la Secretaria">
+            <h3>DÍA DE LA SECRETARIA</h3>
+            <p>Hoy 4 de septiembre festejamos el día de la Secretaría. ¡Gracias Palo!</p>
+          </div>
+          <div class="card">
+            <img src="/img/noticias/DIAAUXILIAR_foto.jpg" alt="Día del Auxiliar">
+            <h3>DÍA DEL AUXILIAR DOCENTE</h3>
+            <p>Feliz día a nuestra querida Auxiliar Cintia. ¡GRACIAS!</p>
+          </div>
+          <div class="card">
+            <img src="/img/noticias/NOTICIAS_CFPMALVINAS_portada.jpg" alt="cartel Malvinas">
+            <h3>¡LAS MALVINAS SON ARGENTINAS!</h3>
+            <p>Colocación de cartel de señalización de la distancia de la escuela EEPA N° 701 a las Islas Malvinas.</p>
+          </div>
+          <div class="card">
+            <img src="/img/noticias/NOTICIAS_CFP9DEJULIO_portada.jpg" alt="9 de Julio">
+            <h3>¡VIVA LA PATRIA!</h3>
+            <p>Hoy celebramos con orgullo y emoción el 208º aniversario de nuestra Declaración de la Independencia.</p>
+          </div>
+          <div class="card">
+            <img src="/img/noticias/noticias_expotecnia.jpg" alt="expotecnia">
+              <h3>¡SE VIENE EXPOTECNIA!</h3>
+              <p>El próximo 13 y 14 de Noviembre se viene Expotecnia. Podés ver todos los avances de las escuelas
+                técnicas de Monte</p>
+            </div>
+            <div class="card">
+              <a href="../paginaweb-cfp/contacto.html"><img src="/img/noticias/NOTICIAS_CFP9DEJULIO_1.jpg"
+                  alt="Inscripcion"></a>
+              <h3>¡SE ABRE LA INSCRIPCIÓN!</h3>
+              <p>Este mes de MARZO abre la inscripción de los cursos ¡Mirá las opciones y anotate!.</p>
+            </div>
+            <!-- Podés agregar más cards sin tocar el JS -->
+          </div>
 
-    <button class="carousel-btn prev">⟨</button>
-    <button class="carousel-btn next">⟩</button>
-  </div>
-</section>
-      </main>
-         
-   
-
-    <footer>
-        <div class="footer-content">
-            <ul class="footer-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+          <button class="carousel-btn prev">⟨</button>
+          <button class="carousel-btn next">⟩</button>
 
         </div>
-        <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
-    </footer>
+        </div>
+    </section>
+
+    <!--Carrousel para cursos-->
+    <section class="carousel">
+      <h1>CURSOS</h1>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="card">
+            <a href="../paginaweb-cfp/cursos/curso-informatica-1.html">
+              <img src="/img/cursos/index_electricidad.jpg"
+                alt="Energía Eléctrica"></a>
+            <h3>CURSOS ENERGÍA ELÉCTRICA</h3>
+            <p>Aprendé a realizar instalaciones eléctricas básicas con seguridad.</p>
+          </div>
+          <div class="card">
+            <img src="/img/cursos/index_programador.jpg" alt="Informática">
+            <h3>CURSOS DE INFORMÁTICA</h3>
+            <p>Aprendé a programar desde cero</p>
+          </div>
+          <div class="card">
+            <img src="/img/cursos/index_administracion.jpg" alt="Administración">
+            <h3>CURSOS DE ADMINISTRACIÓN Y COMERCIALIZACIÓN</h3>
+            <p>Aprendé contabilidad</p>
+          </div>
+          <div class="card">
+            <img src="/img/cursos/index_cocina.jpg" alt="Gastronomía">
+            <h3>CURSOS DE GASTRONOMÍA</h3>
+            <p>Aprendé a cocinar</p>
+          </div>
+          <div class="card">
+            <img src="/img/cursos/index_seguridad.jpg" alt="Seguridad y Medio Ambiente">
+            <h3>CURSOS DE SEGURIDAD Y MEDIO AMBIENTE</h3>
+            <p>Aprendé de seguridad e higiene</p>
+          </div>
+          <!-- Podés agregar más cards sin tocar el JS -->
+        </div>
+
+        <button class="carousel-btn prev">⟨</button>
+        <button class="carousel-btn next">⟩</button>
+      </div>
+    </section>
+  </main>
+    <!--footer-->
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="/cursos/cursos.html">Cursos</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+    </div>
+    <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
+  </footer>
 </body>
 
 </html>

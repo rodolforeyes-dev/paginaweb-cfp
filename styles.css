@@ -170,8 +170,10 @@ header {
 .carousel {
   text-align: center;
   margin: 3rem auto;
-  max-width: 100%;
+  max-width: 50%;
   position: relative;
+  align-content: center;
+  justify-content: center;
 }
 
 .carousel h2 {
@@ -196,10 +198,13 @@ header {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 1.5rem;
+  background: var(--naranja);
+  align-content: center;
 }
 
 .card img {
-  width: 100%;
+  max-width:  70%;
+  height: 300px;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
