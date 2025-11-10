@@ -14,7 +14,13 @@
     --naranja: #fc8a2a;
 }
 body{
-     padding-bottom: 80px; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+main{
+  flex: 1;
 }
 
 /* --- HEADER GENERAL --- */
@@ -422,7 +428,6 @@ footer{
 /*finalizo ezequiel*/
 
 footer {
- position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -481,12 +486,11 @@ footer {
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.contenedor-contacto > * {
     flex: 1;
     min-width: 0;
 }
+
+
 
 form {
     background: var(--fondo);
@@ -532,7 +536,7 @@ button {
 /* Sección de Contacto */
 .contacto-info {
     background: var(--fondo);
-    padding: 80px;
+    padding: 40px;
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
