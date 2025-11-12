@@ -227,6 +227,58 @@ header {
   text-decoration: underline;
 }
 
+.noticiasprincipal{
+    background: grey;
+    /*max-width: 100%;
+    max-height: 500px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url(/img/NOTICIAS_CFPMALVINAS_portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+.noticiasprincipal img {
+    border: 2px solid black;
+}
+
+.imagenesextra{
+    display: flex;
+    align-content: space-evenly;
+    gap: 20px;
+}
+
+.imagenesextra img{
+    max-width: 200px;
+    max-height: 150px;
+    border: 1px solid black;
+}
+
+.noticiasslide{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto 1fr;
+    gap: 15px;
+    min-height: 80vh;
+    padding: 10px;
+}
+
+.noticiasmini{
+  justify-content: center;  
+  background: red;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.noticiasmini img{
+  max-width: 70%;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
 
 /* FINALIZAN ESTILOS PARA SECCION NOTICIAS INDEX*/
 
