@@ -527,7 +527,6 @@ footer{
 .nosotros {
   display: flex;
   background: var(--fondo);
-
   flex-direction: column;
   margin-top: 80px;
   padding: 10px;
@@ -542,6 +541,7 @@ footer{
 .nosotros img {
   margin: 100px;
   padding: 20px;
+  width: 60%;
 }
 
 /*finalizo ezequiel*/
