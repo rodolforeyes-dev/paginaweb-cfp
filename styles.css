@@ -501,7 +501,7 @@ footer {
   background-color: var(--secundario);
   color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   padding: 10px 20px;
@@ -536,6 +536,7 @@ footer {
 /* --- COPYRIGHT --- */
 .footer-copy {
   width: 100%;
+  display: flex;
   text-align: center;
   font-size: 0.7rem;
   opacity: 0.8;
