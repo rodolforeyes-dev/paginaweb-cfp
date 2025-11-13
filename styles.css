@@ -195,20 +195,21 @@ header {
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -25%);
   color: white;
   font-size: 2rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .tituloCfp a {
-  color: black;
+  color: var(--fondo);
   text-decoration: none;
+  font-size: larger;
 
 }
 
 .tituloCfp a:hover {
-  color: var(--fondo);
+  color: var(--secundario);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -419,6 +420,7 @@ header {
 
 }
 
+
 .cardInformatica h2,
 article {
   color: var(--primario);
@@ -429,6 +431,10 @@ article {
   align-items: center;
   width: 250px;
   height: 150px;
+}
+
+.cardInformatica h2, article{
+padding: 5px;
 }
 
 .cardInformatica:hover {
@@ -531,7 +537,6 @@ footer{
 .nosotros {
   display: flex;
   background: var(--fondo);
-
   flex-direction: column;
   margin-top: 80px;
   padding: 10px;
@@ -546,6 +551,7 @@ footer{
 .nosotros img {
   margin: 100px;
   padding: 20px;
+  width: 60%;
 }
 
 /*finalizo ezequiel*/
