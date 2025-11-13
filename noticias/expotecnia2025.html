@@ -16,51 +16,60 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="/img/LOGO-CFP.png" alt="Logo CFP">
+                    <img src="../img/LOGO-CFP.png" alt="Logo CFP">
                 </a>
                 <h3>CFP N°401</h3>
             </div>
+
+            <!-- Botón hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <!--MENU NAVEGACION-->
             <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
                 <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="/noticias/noticias.html">Noticias</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
                 <li> | </li>
             </ul>
+
             <!--Menu iconos contacto-->
             <div class="contact-icons">
-                <a href="#"><i class="fa-solid fa-phone"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <a href="#" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="Ubicación"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="#" aria-label="Sitio web"><i class="fa-solid fa-globe"></i></a>
             </div>
         </nav>
+
+        <!-- Overlay para cerrar menú al hacer clic fuera -->
+        <div class="menu-overlay"></div>
     </header>
+
     <!--Main Claudio imagen principal-->
     <main class="principal">
         <div class="imgPrincipal">
             <img class="imgInformatica" src="../img/noticias/noticias_expotecnia.jpg" alt="imagen principal">
-            <h1 class="tituloCfp">
 
-            </h1>
         </div>
         <!-- fin main -->
         <div class="noticiasprincipal">
-            <h1>
-                ATENCIÓN
-            </h1>
+            <h2>¡Se viene EXPOTECNIA 2025!</h2>
+            <br>
+            <h4>El 13 y 14 de Noviembre se viene una nueva edición de Expotecnia. ¡El CFP401 participa, no te lo podés
+                perder!.</h4>
+            <p>
+                📍 Podés visitarla en la <strong>Escuela Técnica N.º 1 "Ricardo Güiraldes"</strong><br>
+                <strong>Horarios de visita:</strong><br>
+                🕘 Turno Mañana: 9:00 a 13:00 hs<br>
+                🕑 Turno Tarde: 14:00 a 17:00 hs<br>
+                🌙 Turno Vespertino: 18:00 a 20:30 hs<br>
+                <strong>¡No te la pierdas!</strong>
+            </p>
         </div>
-        <h2>¡Se viene EXPOTECNIA 2025!</h2>
-        <h3>El 13 y 14 de Noviembre se viene una nueva edición de Expotecnia. ¡El CFP401 participa, no te lo podés
-            perder!.</h3>
-        <p>Podés visitarla en la TÉCNICA 1
-            Horarios
-            Turno Mañana 9 a 13hs
-            Turno Tarde 14 a 17hs
-            Turno Vespertino 18 a 20:30hs
-            ¡No te la pierdas!</p>
     </main>
 
 
@@ -78,6 +87,7 @@
         </div>
         <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
     </footer>
+    <script src="../script.js" ></script>
 </body>
 
 </html>
