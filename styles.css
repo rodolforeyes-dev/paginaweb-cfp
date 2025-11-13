@@ -787,6 +787,7 @@ footer {
 
   /* Iconos de contacto en móvil */
   .contact-icons {
+    display: none;
     position: fixed;
     bottom: 20px;
     left: -100%;
