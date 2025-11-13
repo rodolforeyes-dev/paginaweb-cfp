@@ -7,43 +7,66 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/3dec5ccc06.js" crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
+    
 </head>
 
 <body>
     <!-- HEADER  -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="/img/LOGO-CFP.png" alt="Logo CFP">
-                </a>
-                <h3>CFP N°401</h3>
-            </div>
-            <!--MENU NAVEGACION-->
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li> | </li>
-            </ul>
-            <!--Menu iconos contacto-->
-            <div class="contact-icons">
-                <a href="#"><i class="fa-solid fa-phone"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-                <a href="#"><i class="fa-solid fa-globe"></i></a>
-            </div>
-        </nav>
-    </header>
+    <!-- HEADER  -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="/img/LOGO-CFP.png" alt="Logo CFP">
+        </a>
+        <h3>CFP N°401</h3>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!--MENU NAVEGACION-->
+      <ul class="menu">
+  <li><a href="/index.html">Inicio</a></li>
+  <li><a href="/nosotros.html">Nosotros</a></li>
+
+  <!-- Dropdown Cursos -->
+  <li class="dropdown">
+    <a  class="dropbtn">Cursos ▾</a>
+    <ul class="dropdown-content">
+      <li><a href="/cursos/index_cocina.html">Gastronomía</a></li>
+      <li><a href="/cursos/index_seguridad.html">Seguridad e Higiene</a></li>
+      <li><a href="/cursos/index_electricidad.html">Electricidad</a></li>
+      <li><a href="/cursos/index_administrativo.html">Administración</a></li>
+      <li><a href="/cursos/index_informatica.html">Informática</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#">Noticias</a></li>
+  <li><a href="/contacto.html">Contacto</a></li>
+  <li> | </li>
+</ul>
+
+      <!--Menu iconos contacto-->
+      <div class="contact-icons">
+        <a href="#" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#" aria-label="Ubicación"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="#" aria-label="Sitio web"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </nav>
+
+    <!-- Overlay para cerrar menú al hacer clic fuera -->
+    <div class="menu-overlay"></div>
+  </header>
     <!-- Formulario -->
  <div class="contenedor-contacto">
     <!-- COLUMNA 1: FORMULARIO -->
     <form>
         <fieldset>
-            <h2>Formulario de inscripción</h2>
+            <h2>Formulario de Contacto</h2>
             <div class="form-group">
                 <label for="nombre">Nombre <span class="required">*</span></label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
@@ -88,7 +111,7 @@
             </div>
             <div class="info-contenido">
                 <h3>Dirección</h3>
-                <p>Manuel Suarez 600, esq Laura Giagnacovo, San Miguel del Monte</p>
+                <p>Manuel Suarez 502, esq Laura Giagnacovo, San Miguel del Monte</p>
             </div>
         </div>
 
@@ -125,26 +148,41 @@
 
     <!-- COLUMNA 3: MAPA -->
     <div class="mapa-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.703719256728!2d-58.80829702448112!3d-35.43736880200185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bd691586afb7db%3A0x8065beff38d68d94!2sManuel%20Su%C3%A1rez%20600%2C%20San%20Miguel%20del%20Monte%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1762471994679!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.703719256728!2d-58.80829702448112!3d-35.43736880200185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bd691586afb7db%3A0x8065beff38d68d94!2sManuel%20Su%C3%A1rez%20502%2C%20San%20Miguel%20del%20Monte%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1762471994679!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     </div><!--finaliza contenedor contacto-->
     <script src="script.js"></script>
 
     <!--fin del formulario de contacto-->
     <!--Footer navegacion y links-->
-    <footer>
-        <div class="footer-content">
-            <ul class="footer-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+    <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p><strong>CFP N.º 401 – San Miguel del Monte</strong><br>
+          Dirección General de Cultura y Educación de la Provincia de Buenos Aires
+          <br>
+          📍 Manuel Suárez 502, Monte, Buenos Aires ·  ✉️ cfp401monte@abc.gob.ar
+          <br>
+          🕓 Lunes a viernes · 18:00 a 22:00 hs · <br>
+          <a href="https://facebook.com/CFP401Monte" target="_blank">Facebook</a>
+        </p>
+      </div>
 
-        </div>
-        <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
-    </footer>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="/cursos/cursos.html">Cursos</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-copy">
+      © 2025 CFP N.º 401 Monte – Todos los derechos reservados.
+    </p>
+  </footer>
+  <script src="/script.js"></script>
 </body>
 
 </html>
