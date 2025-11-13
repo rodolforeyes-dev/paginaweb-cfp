@@ -20,7 +20,9 @@ body {
   flex-direction: column;
   margin: 0;
 }
-
+p{
+  padding: 20px;
+}
 main {
   flex: 1;
 }
@@ -232,6 +234,7 @@ header {
     background: grey;
     /*max-width: 100%;
     max-height: 500px;*/
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,8 +250,9 @@ header {
 
 .imagenesextra{
     display: flex;
-    align-content: space-evenly;
+    align-content:space-between;
     gap: 20px;
+    padding: 40px;
 }
 
 .imagenesextra img{
