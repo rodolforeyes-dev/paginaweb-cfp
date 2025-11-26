@@ -403,9 +403,9 @@ header {
   height: auto;
   border: 2px solid var(--secundario);
   border-radius: 10px;
-  min-width: 100%;
+  min-width: 80%;
   background: white;
-  gap: 20px;
+  gap: 40px;
 }
 
 .cardInformatica {
@@ -433,13 +433,14 @@ header {
 
 .cardInformatica:hover {
   color: aliceblue;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  
   background-color: var(--verde);
 }
 
 .imgPrincipal .imgInformatica {
   width: 40%;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 /* ========================================
@@ -848,7 +849,11 @@ footer {
   .nosotros-section {
     padding: 20px;
   }
-
+  /*CURSOS*/
+  .cursosInformatica{
+    flex-direction: column;
+     text-align: center;
+  }
   /* FOOTER */
   .footer-content {
     flex-direction: column;
@@ -926,6 +931,11 @@ footer {
   /* TÍTULO PRINCIPAL */
   .tituloCfp {
     font-size: 1.5rem;
+  }
+  /*CURSOS*/
+  .cursosInformatica{
+    flex-direction: column;
+     text-align: center;
   }
 
   /* FOOTER */
