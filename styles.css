@@ -849,7 +849,11 @@ footer {
   .nosotros-section {
     padding: 20px;
   }
-
+  /*CURSOS*/
+  .cursosInformatica{
+    flex-direction: column;
+     text-align: center;
+  }
   /* FOOTER */
   .footer-content {
     flex-direction: column;
@@ -927,6 +931,11 @@ footer {
   /* TÍTULO PRINCIPAL */
   .tituloCfp {
     font-size: 1.5rem;
+  }
+  /*CURSOS*/
+  .cursosInformatica{
+    flex-direction: column;
+     text-align: center;
   }
 
   /* FOOTER */
