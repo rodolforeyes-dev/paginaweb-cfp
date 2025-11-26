@@ -206,3 +206,96 @@ carousels.forEach((carousel) => {
     window.addEventListener('resize', updateCardsPerView);
     updateCardsPerView();
 });
+
+//formulario de contacto
+
+ // Número de WhatsApp al que se enviarán los datos (cambia esto por tu número)
+    const NUMERO_WHATSAPP = '5492226442380'; // Formato: código país + número sin espacios ni guiones
+
+    // Función para detectar si es dispositivo móvil
+    function esDispositivoMovil() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Función para limpiar el formulario
+    function limpiarFormulario() {
+        document.getElementById('formularioInscripcion').reset();
+    }
+
+    // Función para formatear el nombre del curso
+    function formatearCurso(valor) {
+        const cursos = {
+            'informatica': 'Informática',
+            'electricista': 'Electricista',
+            'administracion': 'Administración',
+            'seguridad_higiene': 'Seguridad e higiene',
+            'cocina': 'Cocina'
+        };
+        return cursos[valor] || valor;
+    }
+
+    // Función principal para enviar por WhatsApp
+    function enviarPorWhatsApp(event) {
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        const nombre = document.getElementById('nombre').value.trim();
+        const telefono = document.getElementById('telefono').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const curso = document.getElementById('curso').value;
+        const comentario = document.getElementById('comentario').value.trim();
+
+        // Construir el mensaje
+        let mensaje = `*NUEVA INSCRIPCIÓN*\n\n`;
+        mensaje += `*Nombre:* ${nombre}\n`;
+        if (telefono) {
+            mensaje += `*Teléfono:* ${telefono}\n`;
+        }
+        mensaje += `*Email:* ${email}\n`;
+        mensaje += `*Curso:* ${formatearCurso(curso)}\n`;
+        if (comentario) {
+            mensaje += `*Comentarios:* ${comentario}\n`;
+        }
+
+        // Codificar el mensaje para URL
+        const mensajeCodificado = encodeURIComponent(mensaje);
+
+        // Determinar la URL según el dispositivo
+        let urlWhatsApp;
+        if (esDispositivoMovil()) {
+            // Para móviles: usa la app de WhatsApp
+            urlWhatsApp = `whatsapp://send?phone=${NUMERO_WHATSAPP}&text=${mensajeCodificado}`;
+        } else {
+            // Para PC: usa WhatsApp Web
+            urlWhatsApp = `https://web.whatsapp.com/send?phone=${NUMERO_WHATSAPP}&text=${mensajeCodificado}`;
+        }
+
+        // Abrir WhatsApp
+        const ventana = window.open(urlWhatsApp, '_blank');
+
+        // Verificar si se pudo abrir la ventana (para detectar si tiene WhatsApp Web)
+        if (!ventana || ventana.closed || typeof ventana.closed === 'undefined') {
+            // Si no se pudo abrir (bloqueado por popup o no disponible)
+            alert('No se pudo abrir WhatsApp. Por favor, asegúrate de:\n\n' +
+                  '• Permitir ventanas emergentes en este sitio\n' +
+                  '• Tener WhatsApp Web abierto en tu navegador\n' +
+                  '• Haber iniciado sesión en WhatsApp Web');
+        } else {
+            // Si desde PC, dar un momento y verificar si WhatsApp Web está disponible
+            if (!esDispositivoMovil()) {
+                setTimeout(() => {
+                    alert('Si WhatsApp Web no se abrió:\n\n' +
+                          '1. Visita https://web.whatsapp.com\n' +
+                          '2. Escanea el código QR con tu teléfono\n' +
+                          '3. Vuelve a enviar el formulario');
+                }, 2000);
+            }
+        }
+
+        // Opcional: limpiar el formulario después de enviar
+        // limpiarFormulario();
+    }
+
+    // Agregar el evento submit al formulario
+    document.getElementById('formularioInscripcion').addEventListener('submit', enviarPorWhatsApp);
+
