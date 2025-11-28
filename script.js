@@ -1,65 +1,82 @@
 //limpiar formulario contacto
 function limpiarFormulario() {
-  document.getElementById("nombre").value = "";
-  document.getElementById("telefono").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("curso").value = "";
-  document.getElementById("comentario").value = "";
+    document.getElementById("nombre").value = "";
+    document.getElementById("telefono").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("curso").value = "";
+    document.getElementById("comentario").value = "";
 }
 //fin formulario
 
+
+
+//NOTICIAS CAROUSEL
+
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTU50Nz2aurEg1tTxLoxKfsq2lKevGtchxTvQ9HUgUGcHOKJ-cQrrPijdQiPyAQ7b4fdv2_EOC9Mhb-/pub?output=tsv";
+
+async function getNoticias() {
+  const res = await fetch(SHEET_URL);
+  const data = await res.text();
+  const rows = data.split("\n").slice(1);
+
+  const noticias = rows.map(row => {
+    const [id, titulo, bajada, cuerpo, imagen] = row.split("\t");
+    return { id, titulo, bajada, cuerpo, imagen };
+  });
+
+  console.log("Noticias cargadas desde Sheets:", noticias);
+  return noticias;
+}
+
+//NOTICIAS CAROUSEL
+getNoticias().then(noticias => {
+  const container = document.getElementById("carousel");
+
+  container.innerHTML = noticias.map(n => `
+    <div class="card">
+      <img src="${n.imagen}" alt="${n.titulo}">
+      <h3>${n.titulo}</h3>
+      <p>${n.bajada}</p>
+      <a href="noticia.html?id=${n.id}">Leer más</a>
+    </div>
+  `).join("");
+});
+
 // Carrusel reutilizable con auto-play y pausa al pasar el mouse
 document.querySelectorAll('.carousel').forEach(carrusel => {
-  const track = carrusel.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = carrusel.querySelector('.next');
-  const prevButton = carrusel.querySelector('.prev');
+    const track = carrusel.querySelector('.carousel-track');
+    const nextButton = carrusel.querySelector('.next');
+    const prevButton = carrusel.querySelector('.prev');
 
-  let currentIndex = 0;
-  let intervalId = null;
-  const autoPlayInterval = 4000; // tiempo entre slides (ms)
-
-  function updateCarousel() {
-    const width = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentIndex * width}px)`;
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  }
-
-  // Botones manuales
-  nextButton.addEventListener('click', nextSlide);
-  prevButton.addEventListener('click', prevSlide);
-
-  // Auto-play
-  function startAutoPlay() {
-    if (!intervalId) {
-      intervalId = setInterval(nextSlide, autoPlayInterval);
+    function getSlides() {
+        return Array.from(track.children);
     }
-  }
 
-  function stopAutoPlay() {
-    clearInterval(intervalId);
-    intervalId = null;
-  }
+    let currentIndex = 0;
 
-  // Pausar al pasar el mouse sobre el carrusel
-  carrusel.addEventListener('mouseenter', stopAutoPlay);
-  carrusel.addEventListener('mouseleave', startAutoPlay);
+    function updateCarousel() {
+        const slides = getSlides();
+        if (!slides.length) return; // evita error
+        const width = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
 
-  // Ajustar al redimensionar pantalla
-  window.addEventListener('resize', updateCarousel);
+    function nextSlide() {
+        const slides = getSlides();
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
 
-  // Iniciar
-  updateCarousel();
-  startAutoPlay();
+    function prevSlide() {
+        const slides = getSlides();
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    updateCarousel();
 });
 
 // ========================================
@@ -77,7 +94,7 @@ function toggleMenu() {
     menu.classList.toggle('active');
     contactIcons.classList.toggle('active');
     menuOverlay.classList.toggle('active');
-    
+
     // Cambiar icono hamburguesa por X
     if (menu.classList.contains('active')) {
         menuIcon.classList.remove('fa-bars');
@@ -110,6 +127,9 @@ window.addEventListener('resize', () => {
         toggleMenu();
     }
 });
+
+
+
 
 // ========================================
 // CARRUSELES MÚLTIPLES
@@ -209,93 +229,93 @@ carousels.forEach((carousel) => {
 
 //formulario de contacto
 
- // Número de WhatsApp al que se enviarán los datos (cambia esto por tu número)
-    const NUMERO_WHATSAPP = '5492226442380'; // Formato: código país + número sin espacios ni guiones
+// Número de WhatsApp al que se enviarán los datos (cambia esto por tu número)
+const NUMERO_WHATSAPP = '5492226442380'; // Formato: código país + número sin espacios ni guiones
 
-    // Función para detectar si es dispositivo móvil
-    function esDispositivoMovil() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+// Función para detectar si es dispositivo móvil
+function esDispositivoMovil() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Función para limpiar el formulario
+function limpiarFormulario() {
+    document.getElementById('formularioInscripcion').reset();
+}
+
+// Función para formatear el nombre del curso
+function formatearCurso(valor) {
+    const cursos = {
+        'informatica': 'Informática',
+        'electricista': 'Electricista',
+        'administracion': 'Administración',
+        'seguridad_higiene': 'Seguridad e higiene',
+        'cocina': 'Cocina'
+    };
+    return cursos[valor] || valor;
+}
+
+// Función principal para enviar por WhatsApp
+function enviarPorWhatsApp(event) {
+    event.preventDefault();
+
+    // Obtener los valores del formulario
+    const nombre = document.getElementById('nombre').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const curso = document.getElementById('curso').value;
+    const comentario = document.getElementById('comentario').value.trim();
+
+    // Construir el mensaje
+    let mensaje = `*NUEVA INSCRIPCIÓN*\n\n`;
+    mensaje += `*Nombre:* ${nombre}\n`;
+    if (telefono) {
+        mensaje += `*Teléfono:* ${telefono}\n`;
+    }
+    mensaje += `*Email:* ${email}\n`;
+    mensaje += `*Curso:* ${formatearCurso(curso)}\n`;
+    if (comentario) {
+        mensaje += `*Comentarios:* ${comentario}\n`;
     }
 
-    // Función para limpiar el formulario
-    function limpiarFormulario() {
-        document.getElementById('formularioInscripcion').reset();
+    // Codificar el mensaje para URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+
+    // Determinar la URL según el dispositivo
+    let urlWhatsApp;
+    if (esDispositivoMovil()) {
+        // Para móviles: usa la app de WhatsApp
+        urlWhatsApp = `whatsapp://send?phone=${NUMERO_WHATSAPP}&text=${mensajeCodificado}`;
+    } else {
+        // Para PC: usa WhatsApp Web
+        urlWhatsApp = `https://web.whatsapp.com/send?phone=${NUMERO_WHATSAPP}&text=${mensajeCodificado}`;
     }
 
-    // Función para formatear el nombre del curso
-    function formatearCurso(valor) {
-        const cursos = {
-            'informatica': 'Informática',
-            'electricista': 'Electricista',
-            'administracion': 'Administración',
-            'seguridad_higiene': 'Seguridad e higiene',
-            'cocina': 'Cocina'
-        };
-        return cursos[valor] || valor;
+    // Abrir WhatsApp
+    const ventana = window.open(urlWhatsApp, '_blank');
+
+    // Verificar si se pudo abrir la ventana (para detectar si tiene WhatsApp Web)
+    if (!ventana || ventana.closed || typeof ventana.closed === 'undefined') {
+        // Si no se pudo abrir (bloqueado por popup o no disponible)
+        alert('No se pudo abrir WhatsApp. Por favor, asegúrate de:\n\n' +
+            '• Permitir ventanas emergentes en este sitio\n' +
+            '• Tener WhatsApp Web abierto en tu navegador\n' +
+            '• Haber iniciado sesión en WhatsApp Web');
+    } else {
+        // Si desde PC, dar un momento y verificar si WhatsApp Web está disponible
+        if (!esDispositivoMovil()) {
+            setTimeout(() => {
+                alert('Si WhatsApp Web no se abrió:\n\n' +
+                    '1. Visita https://web.whatsapp.com\n' +
+                    '2. Escanea el código QR con tu teléfono\n' +
+                    '3. Vuelve a enviar el formulario');
+            }, 2000);
+        }
     }
 
-    // Función principal para enviar por WhatsApp
-    function enviarPorWhatsApp(event) {
-        event.preventDefault();
+    // Opcional: limpiar el formulario después de enviar
+    // limpiarFormulario();
+}
 
-        // Obtener los valores del formulario
-        const nombre = document.getElementById('nombre').value.trim();
-        const telefono = document.getElementById('telefono').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const curso = document.getElementById('curso').value;
-        const comentario = document.getElementById('comentario').value.trim();
-
-        // Construir el mensaje
-        let mensaje = `*NUEVA INSCRIPCIÓN*\n\n`;
-        mensaje += `*Nombre:* ${nombre}\n`;
-        if (telefono) {
-            mensaje += `*Teléfono:* ${telefono}\n`;
-        }
-        mensaje += `*Email:* ${email}\n`;
-        mensaje += `*Curso:* ${formatearCurso(curso)}\n`;
-        if (comentario) {
-            mensaje += `*Comentarios:* ${comentario}\n`;
-        }
-
-        // Codificar el mensaje para URL
-        const mensajeCodificado = encodeURIComponent(mensaje);
-
-        // Determinar la URL según el dispositivo
-        let urlWhatsApp;
-        if (esDispositivoMovil()) {
-            // Para móviles: usa la app de WhatsApp
-            urlWhatsApp = `whatsapp://send?phone=${NUMERO_WHATSAPP}&text=${mensajeCodificado}`;
-        } else {
-            // Para PC: usa WhatsApp Web
-            urlWhatsApp = `https://web.whatsapp.com/send?phone=${NUMERO_WHATSAPP}&text=${mensajeCodificado}`;
-        }
-
-        // Abrir WhatsApp
-        const ventana = window.open(urlWhatsApp, '_blank');
-
-        // Verificar si se pudo abrir la ventana (para detectar si tiene WhatsApp Web)
-        if (!ventana || ventana.closed || typeof ventana.closed === 'undefined') {
-            // Si no se pudo abrir (bloqueado por popup o no disponible)
-            alert('No se pudo abrir WhatsApp. Por favor, asegúrate de:\n\n' +
-                  '• Permitir ventanas emergentes en este sitio\n' +
-                  '• Tener WhatsApp Web abierto en tu navegador\n' +
-                  '• Haber iniciado sesión en WhatsApp Web');
-        } else {
-            // Si desde PC, dar un momento y verificar si WhatsApp Web está disponible
-            if (!esDispositivoMovil()) {
-                setTimeout(() => {
-                    alert('Si WhatsApp Web no se abrió:\n\n' +
-                          '1. Visita https://web.whatsapp.com\n' +
-                          '2. Escanea el código QR con tu teléfono\n' +
-                          '3. Vuelve a enviar el formulario');
-                }, 2000);
-            }
-        }
-
-        // Opcional: limpiar el formulario después de enviar
-        // limpiarFormulario();
-    }
-
-    // Agregar el evento submit al formulario
-    document.getElementById('formularioInscripcion').addEventListener('submit', enviarPorWhatsApp);
+// Agregar el evento submit al formulario
+document.getElementById('formularioInscripcion').addEventListener('submit', enviarPorWhatsApp);
 

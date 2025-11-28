@@ -290,7 +290,11 @@ header {
 }
 
 .noticiasMain {
-  background: var(--verde);
+  background: var(--secundario);
+}
+
+.noticiasMain a{
+ padding: 15px;
 }
 
 .cursosMain {
