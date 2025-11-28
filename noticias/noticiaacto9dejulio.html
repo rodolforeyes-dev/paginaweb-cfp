@@ -11,46 +11,71 @@
 </head>
 
 <body>
-    <!-- HEADER  -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="/img/LOGO-CFP.png" alt="Logo CFP">
-                </a>
-                <h3>CFP N°401</h3>
-            </div>
-            <!--MENU NAVEGACION-->
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="/nosotros.html">Nosotros</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="/noticias.html">Noticias</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
-                <li> | </li>
-            </ul>
-            <!--Menu iconos contacto-->
-            <div class="contact-icons">
-                <a href="#"><i class="fa-solid fa-phone"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-                <a href="#"><i class="fa-solid fa-globe"></i></a>
-            </div>
-        </nav>
-    </header>
+   <!-- HEADER  -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="/img/LOGO-CFP.png" alt="Logo CFP">
+        </a>
+        <h3>CFP N°401</h3>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!--MENU NAVEGACION-->
+      <ul class="menu">
+  <li><a href="/index.html">Inicio</a></li>
+  <li><a href="/nosotros.html">Nosotros</a></li>
+
+  <!-- Dropdown Cursos -->
+  <li class="dropdown">
+    <a  class="dropbtn">Cursos ▾</a>
+    <ul class="dropdown-content">
+      <li><a href="/cursos/index_cocina.html">Gastronomía</a></li>
+      <li><a href="/cursos/index_seguridad.html">Seguridad e Higiene</a></li>
+      <li><a href="/cursos/index_electricidad.html">Electricidad</a></li>
+      <li><a href="/cursos/index_administrativo.html">Administración</a></li>
+      <li><a href="/cursos/index_informatica.html">Informática</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#">Noticias</a></li>
+  <li><a href="/contacto.html">Contacto</a></li>
+  <li> | </li>
+</ul>
+
+      <!--Menu iconos contacto-->
+      <div class="contact-icons">
+        <a href="#" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#" aria-label="Ubicación"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="#" aria-label="Sitio web"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </nav>
+
+    <!-- Overlay para cerrar menú al hacer clic fuera -->
+    <div class="menu-overlay"></div>
+  </header>
+
     <!--Main Claudio imagen principal-->
-    <main class="principal">
-        <div class="imgPrincipal">
-            <img class="imgInformatica" src="/img/noticias/NOTICIAS_CFP9DEJULIO_portada.jpg" alt="9 de Julio">
-            <h1 class="tituloCfp">
-                <a href="#">9 de Julio</a>
-            </h1>
-        </div>
+    <div class="nosotros">
+         <h1>
+               9 de Julio
+         </h1>
+         <div class="nosotros-header">
+            <img src="/img/noticias/NOTICIAS_CFP9DEJULIO_portada.jpg" alt="9 de Julio">
+            
+          </div> 
+          <h1>¡Viva la patria!</h1> 
         <!-- fin main -->
-        <h1>¡Viva la patria!</h1>
-        <h3>Hoy celebramos nuestra independencia</h3>
-        <img src="/img/NOTICIAS_CFP9DEJULIO_portada.jpg" alt="">
-        <p>Hoy celebramos con orgullo y emoción el 208º aniversario de nuestra Declaración de la Independencia.
+         <div class="nosotros-section">
+         
+         <h2>Hoy celebramos nuestra independencia</h2>
+         <p><strong>Hoy celebramos con orgullo y emoción el 208º aniversario de nuestra Declaración de la Independencia.
             Recordamos a los valientes hombres y mujeres que lucharon por nuestra libertad y nos dieron la oportunidad
             de construir un país soberano.
 
@@ -60,41 +85,57 @@
             cultura.
 
             La independencia es un legado que nos inspira a seguir adelante, a trabajar juntos por un futuro mejor y a
-            defender nuestros valores y tradiciones. ¡Feliz Día de la Independencia!</p>
-        <div class="cursosInformatica">
+            defender nuestros valores y tradiciones.</strong></p>
+           </div>
+         <h1>¡Feliz Día de la Independencia!</h1>
 
-            <div class="cardInformatica">
+          <div class="cursosInformatica">
+
+            <div class="nosotros-header">
                 <img src="/img/noticias/NOTICIAS_CFP9DEJULIO_1.jpg" alt="cfp401">
-            </div>
-            <div class="cardInformatica">
+             </div>
+             <div class="nosotros-header">
                 <img src="/img/noticias/NOTICIAS_CFP9DEJULIO_2.jpg" alt="cfp401">
-            </div>
-            <div class="cardInformatica">
+             </div>
+             <div class="nosotros-header">
                 <img src="/img/noticias/NOTICIAS_CFP9DEJULIO_3.jpg" alt="cfp401">
-            </div>
-            <div class="cardInformatica">
+             </div>
+             <div class="nosotros-header">
                 <img src="/img/noticias/NOTICIAS_CFP9DEJULIO_4.jpg" alt="cfp401">
-            </div>
-            </div>
+             </div>
+           </div>
+           </div>
+        
+        
+    <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p><strong>CFP N.º 401 – San Miguel del Monte</strong><br>
+          Dirección General de Cultura y Educación de la Provincia de Buenos Aires
+          <br>
+          📍 Manuel Suárez 502, Monte, Buenos Aires ·  ✉️ cfp401monte@abc.gob.ar
+          <br>
+          🕓 Lunes a viernes · 18:00 a 22:00 hs · <br>
+          <a href="https://facebook.com/CFP401Monte" target="_blank">Facebook</a>
+        </p>
+      </div>
 
-        </section>
-    </main>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="/cursos/cursos.html">Cursos</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
 
-    <!--Footer navegacion y links-->
-    <footer>
-        <div class="footer-content">
-            <ul class="footer-links">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/nosotros.html">Nosotros</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="/nosotros.html">Noticias</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
-            </ul>
+    <p class="footer-copy">
+      © 2025 CFP N.º 401 Monte – Todos los derechos reservados.
+    </p>
+  </footer>
 
-        </div>
-        <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
-    </footer>
-
+  <script src="../script.js"></script>
 </body>
 
 </html>
