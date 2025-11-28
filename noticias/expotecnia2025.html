@@ -7,7 +7,7 @@
     <title>EXPOTECNIA</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://kit.fontawesome.com/3dec5ccc06.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="../img/LOGO-CFP.png" alt="Logo CFP">
+                    <img src="/img/LOGO-CFP.png" alt="Logo CFP">
                 </a>
                 <h3>CFP N°401</h3>
             </div>
@@ -30,8 +30,20 @@
             <ul class="menu">
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/nosotros.html">Nosotros</a></li>
-                <li><a href="/cursos/cursos.html">Cursos</a></li>
-                <li><a href="/noticias/noticias.html">Noticias</a></li>
+
+                <!-- Dropdown Cursos -->
+                <li class="dropdown">
+                    <a class="dropbtn">Cursos ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/cursos/index_cocina.html">Gastronomía</a></li>
+                        <li><a href="/cursos/index_seguridad.html">Seguridad e Higiene</a></li>
+                        <li><a href="/cursos/index_electricidad.html">Electricidad</a></li>
+                        <li><a href="/cursos/index_administrativo.html">Administración</a></li>
+                        <li><a href="/cursos/index_informatica.html">Informática</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Noticias</a></li>
                 <li><a href="/contacto.html">Contacto</a></li>
                 <li> | </li>
             </ul>
@@ -50,48 +62,63 @@
     </header>
 
     <!--Main Claudio imagen principal-->
-   
-      <main>
-         <div class="nosotros"> 
-  <h1>EXPOTECNIA 2025</h1>
-        <div class="nosotros-header">
-            <img src="../img/noticias/noticias_expotecnia.jpg" alt="imagen principal">
 
-       
-        <!-- fin main -->
-        <div class="nosotros-intro">
-            <h2>¡Se viene EXPOTECNIA 2025!</h2>
-            <br>
-            <h4>El 13 y 14 de Noviembre se viene una nueva edición de Expotecnia. ¡El CFP401 participa, no te lo podés
-                perder!.</h4>
-            <p>
-                📍 Podés visitarla en la <strong>Escuela Técnica N.º 1 "Ricardo Güiraldes"</strong><br>
-                <strong>Horarios de visita:</strong><br>
-                🕘 Turno Mañana: 9:00 a 13:00 hs<br>
-                🕑 Turno Tarde: 14:00 a 17:00 hs<br>
-                🌙 Turno Vespertino: 18:00 a 20:30 hs<br>
-                <strong>¡No te la pierdas!</strong>
-            </p>
-        </div>
-        </div>
-          </div>
-      </main>
+    <main>
+        <div class="nosotros">
+            <h1>EXPOTECNIA 2025</h1>
+            <div class="nosotros-header">
+                <img src="../img/noticias/noticias_expotecnia.jpg" alt="imagen principal">
 
-    <!--Footer navegacion y links-->
+
+                <!-- fin main -->
+                <div class="nosotros-intro">
+                    <h2>¡Se viene EXPOTECNIA 2025!</h2>
+                    <br>
+                    <h4>El 13 y 14 de Noviembre se viene una nueva edición de Expotecnia. ¡El CFP401 participa, no te lo
+                        podés
+                        perder!.</h4>
+                    <p>
+                        📍 Podés visitarla en la <strong>Escuela Técnica N.º 1 "Ricardo Güiraldes"</strong><br>
+                        <strong>Horarios de visita:</strong><br>
+                        🕘 Turno Mañana: 9:00 a 13:00 hs<br>
+                        🕑 Turno Tarde: 14:00 a 17:00 hs<br>
+                        🌙 Turno Vespertino: 18:00 a 20:30 hs<br>
+                        <strong>¡No te la pierdas!</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>CFP N.º 401 – San Miguel del Monte</strong><br>
+                    Dirección General de Cultura y Educación de la Provincia de Buenos Aires
+                    <br>
+                    📍 Manuel Suárez 502, Monte, Buenos Aires · ✉️ cfp401monte@abc.gob.ar
+                    <br>
+                    🕓 Lunes a viernes · 18:00 a 22:00 hs · <br>
+                    <a href="https://facebook.com/CFP401Monte" target="_blank">Facebook</a>
+                </p>
+            </div>
+
             <ul class="footer-links">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/nosotros.html">Nosotros</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="/cursos/cursos.html">Cursos</a></li>
                 <li><a href="#">Noticias</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
-
         </div>
-        <p class="footer-copy">© 2025 CFP 401 - San Miguel del Monte</p>
+
+        <p class="footer-copy">
+            © 2025 CFP N.º 401 Monte – Todos los derechos reservados.
+        </p>
     </footer>
-    <script src="../script.js" ></script>
+
+    <script src="../script.js"></script>
 </body>
 
 </html>
