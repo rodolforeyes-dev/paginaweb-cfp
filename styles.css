@@ -501,6 +501,7 @@ header {
 
 .nosotros-section {
   background-color: #fff;
+  display: flex;
   border-radius: 15px;
   padding: 30px 40px;
   margin-bottom: 30px;
@@ -522,6 +523,13 @@ header {
 .nosotros-section.equipo h3 {
   margin-top: 10px;
   color: #004b6e;
+}
+.nosotros-section img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto;
+   margin: 20px auto;
+    object-fit: cover;
 }
 
 .equipo-lista {
